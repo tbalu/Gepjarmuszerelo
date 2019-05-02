@@ -1,0 +1,40 @@
+{
+  "szerelesek": [
+    {
+      "Rendszam": "ABC-123",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 2
+    },
+    {
+      "Rendszam": "ABC-124",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 23
+    },
+    {
+      "Rendszam": "4",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      }
+    }
+  ]
+}

@@ -41,5 +41,6 @@ public class Main extends Application {
         Logger.info(DataStore.getSzerelesek());
         Logger.info(DataStore.getTulajdonosok());
         Logger.info(DataStore.getGepjarmuvek());
+        DataStore.saveMindent("tulajdonosok.json","gepjarmuvek.json","szerelesek.json");
     }
 }

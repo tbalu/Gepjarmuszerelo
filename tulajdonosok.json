@@ -1,0 +1,19 @@
+{
+  "tulajdonosok": [
+    {
+      "Nev": "Toth Balazs",
+      "Lakcim": "Debrecen",
+      "Jogositvanyszam": "1234"
+    },
+    {
+      "Nev": "Toth Janos",
+      "Lakcim": "Debrecen",
+      "Jogositvanyszam": "1235"
+    },
+    {
+      "Nev": "T",
+      "Lakcim": "D",
+      "Jogositvanyszam": "77"
+    }
+  ]
+}

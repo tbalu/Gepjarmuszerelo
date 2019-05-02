@@ -1,0 +1,19 @@
+{
+  "gepjarmuvek": [
+    {
+      "Marka": "Telsa",
+      "Rendszam": "ABC-123",
+      "TulajdonosJogositvanyszam": "1234"
+    },
+    {
+      "Marka": "BMW",
+      "Rendszam": "ABC-124",
+      "TulajdonosJogositvanyszam": "1234"
+    },
+    {
+      "Marka": "W",
+      "Rendszam": "4",
+      "TulajdonosJogositvanyszam": "77"
+    }
+  ]
+}

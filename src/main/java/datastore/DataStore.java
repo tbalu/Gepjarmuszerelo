@@ -25,19 +25,22 @@ public class DataStore {
 
     public static void loadTulajdonosok(){
             /* TODO */
-            Tulajdonosok.add(new Tulajdonos("Tóth Balázs","Debrecen, Nagycsere tanya HRSZ.:02147/5","123"));
-            Logger.info(Tulajdonosok.toString());
+            //Tulajdonosok.add(new Tulajdonos("Tóth Balázs","Debrecen, Nagycsere tanya HRSZ.:02147/5","123"));
+        Tulajdonosok.addAll(JSONOlvasoIro.tulajdonosokBeolvas("tulajdonosok.json"));
+        Logger.info(Tulajdonosok.toString());
         }
         public static void loadGepjarmuvek(){
         /* TODO */
-            Gepjarmuvek.add(new Gepjarmu("Tesla Model S","ABC-123","123"));
+            Gepjarmuvek.addAll(JSONOlvasoIro.gepjarmuveketBeolvas("gepjarmuvek.json"));
             Logger.info(Gepjarmuvek.toString());
         }
         public static void loadSzerelesek(){
         /* TODO */
-            Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,5)));
+            /*Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,5)));
             Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,6)
-                    ,LocalDate.of(2019, Month.APRIL,6),11,null));
+                    ,LocalDate.of(2019, Month.APRIL,6),11,null));*/
+            Szerelesek.addAll(JSONOlvasoIro.szereleseketBeolvas("szerelesek.json"));
+
             Logger.info(Szerelesek.toString());
         }
         public static void loadSzerelesek2(){
@@ -47,6 +50,12 @@ public class DataStore {
         }
         public static void loadBefejezendoSzerelesek(){
             BefejezendoSzerelesek.add(new BefejezendoSzereles("ABC-123",LocalDate.of(2019,Month.APRIL,4)));
+        }
+
+        public static void saveMindent(String tul, String gps, String szer){
+            JSONOlvasoIro.gepjarmuveketMent(getGepjarmuvek(),gps);
+            JSONOlvasoIro.szereleseketMent(getSzerelesek(),szer);
+            JSONOlvasoIro.tulajdonosokatMent(getTulajdonosok(),tul);
         }
 
     public static List<Tulajdonos> getTulajdonosok() {

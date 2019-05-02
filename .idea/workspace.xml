@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad894c1c-9da5-401d-8efd-79d881b26d34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gepjarmuvek.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastore/Gepjarmuvek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastore/JSONOlvasoIro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastore/Szerelesek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datastore/Tulajdonosok.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/szerelesek.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tulajdonosok.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/datastore/DataStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datastore/DataStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/datastore/DataStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/datastore/DataStore.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,18 +29,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/SzerelesBefejezese.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entities/Gepjarmu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -38,14 +37,97 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datastore/DataStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="251">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="43" column="85" selection-start-line="43" selection-start-column="85" selection-end-line="43" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/szerelesek.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entitymanager/GepjarmuManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastore/Szerelesek.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastore/Tulajdonosok.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastore/JSONOlvasoIro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="19" column="84" lean-forward="true" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/datastore/Gepjarmuvek.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -107,13 +189,17 @@
         <option value="$PROJECT_DIR$/src/test/java/StatisztikaManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/entitymanager/StatisztikaManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/entitymanager/StatisztikaManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/datastore/DataStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/BefejezettSzerelesekController.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Szereles.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/FolyamatbanLevoSzerelesekController.java" />
         <option value="$PROJECT_DIR$/src/main/java/guidemo/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastore/Gepjarmuvek.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/datastore/JSONOlvasoIro.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastore/Szerelesek.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastore/Tulajdonosok.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datastore/DataStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/Main.java" />
       </list>
     </option>
   </component>
@@ -197,6 +283,22 @@
             <path>
               <item name="GepjarmuszereloRegi" type="b2602c69:ProjectViewProjectNode" />
               <item name="GepjarmuszereloRegi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entitymanager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GepjarmuszereloRegi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GepjarmuszereloRegi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GepjarmuszereloRegi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GepjarmuszereloRegi" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -211,7 +313,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555959395626" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jpaTest/jpaTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -221,19 +323,21 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="entitymanager" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Balu\Documents\Egyetem\Gepjarmuszerelo\src\main\resources\META-INF" />
-      <recent name="C:\Users\Balu\Documents\Egyetem\Gepjarmuszerelo\src\main\java\view" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="entities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Balu\Documents\Egyetem\GepjarmuszereloRegi" />
+      <recent name="C:\Users\Balu\Documents\Egyetem\GepjarmuszereloRegi\src\main\java\datastore" />
       <recent name="C:\Users\Balu\Documents\Egyetem\Gepjarmuszerelo\src" />
       <recent name="C:\Users\Balu\Documents\Egyetem\Gepjarmuszerelo\src\main\java\guidemo" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="entities" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Balu\Documents\Egyetem\Gepjarmuszerelo\src\main\resources\META-INF" />
+      <recent name="C:\Users\Balu\Documents\Egyetem\Gepjarmuszerelo\src\main\java\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -290,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555366412197</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rendben mukodik a felhasznaloi felulet.">
+      <created>1556831814355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556831814355</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -316,7 +427,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.23371105" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.504698" visible="true" weight="0.33569404" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,7 +435,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3101983" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.23371105" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.49530202" side_tool="true" visible="true" weight="0.33569404" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -391,27 +502,10 @@
     <MESSAGE value="BefejezettSzerelesek ablak elerese, BefejezettSzerelesek tablazat feltoltese." />
     <MESSAGE value="Statisztika: mai, ehavi, ezevi bevetel megvalositasa" />
     <MESSAGE value="Egy fuggveny hatarozza meg az eves, havi, napi bevetelt." />
-    <option name="LAST_COMMIT_MESSAGE" value="Egy fuggveny hatarozza meg az eves, havi, napi bevetelt." />
+    <MESSAGE value="Rendben mukodik a felhasznaloi felulet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rendben mukodik a felhasznaloi felulet." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/BefejezettSzereles.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/ElkezdettSzereles.java" />
-    <entry file="jar://$USER_HOME$/jdk-11.0.2_windows-x64_bin/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/guidemo/FXMLDocument.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entitymanager/GepjarmuManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SzerelesekBefejezeseController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SzerelesekFolyamatbanController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/view/SzerelesekFolyamatban.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/view/SzerelesekBefejezese.fxml" />
@@ -579,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../jdk-11.0.2_windows-x64_bin/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -594,16 +681,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/guidemo/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/Alkatresz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -678,7 +755,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/SzerelesBefejezese.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -692,10 +769,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entitymanager/GepjarmuManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastore/Szerelesek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastore/Tulajdonosok.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastore/Gepjarmuvek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/szerelesek.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datastore/JSONOlvasoIro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="19" column="84" lean-forward="true" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datastore/DataStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="251">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="43" column="85" selection-start-line="43" selection-start-column="85" selection-end-line="43" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
