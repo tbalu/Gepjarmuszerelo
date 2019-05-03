@@ -174,7 +174,13 @@
         "year": 2019,
         "month": 5,
         "day": 3
-      }
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 10
     },
     {
       "Rendszam": "q4",
@@ -189,6 +195,48 @@
         "day": 3
       },
       "MunkavegzesKoltsege": 1
+    },
+    {
+      "Rendszam": "a9",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 4
+    },
+    {
+      "Rendszam": "AB",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 34
+    },
+    {
+      "Rendszam": "5w5w5w5",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 23
     }
   ]
 }

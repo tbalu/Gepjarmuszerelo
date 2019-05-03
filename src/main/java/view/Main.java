@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 
 public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
-        URL url = Paths.get("./src/main/java/view/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
+        URL url = Paths.get("./src/main/resources/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
         Parent root = FXMLLoader.load(url);
        // Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         primaryStage.setTitle("Hello World");

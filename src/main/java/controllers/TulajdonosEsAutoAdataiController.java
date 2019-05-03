@@ -46,7 +46,7 @@ public class TulajdonosEsAutoAdataiController {
 
     }
     public void folyamatbanLevoSzerelesekPushed(ActionEvent event) throws IOException {
-        URL url = Paths.get("./src/main/java/view/FolyamatbanLevoSzerelesek.fxml").toUri().toURL();
+        URL url = Paths.get("./src/main/resources/FolyamatbanLevoSzerelesek.fxml").toUri().toURL();
         Parent tableViewParent = FXMLLoader.load(url);
         Scene tableViewScene = new Scene(tableViewParent);
 
@@ -56,7 +56,7 @@ public class TulajdonosEsAutoAdataiController {
         window.show();
     }
     public void statisztikaPushed(ActionEvent event) throws IOException {
-        URL url = Paths.get("./src/main/java/view/BefejezettSzerelesek.fxml").toUri().toURL();
+        URL url = Paths.get("./src/main/resources/BefejezettSzerelesek.fxml").toUri().toURL();
         Parent tableViewParent = FXMLLoader.load(url);
         Scene tableViewScene = new Scene(tableViewParent);
 

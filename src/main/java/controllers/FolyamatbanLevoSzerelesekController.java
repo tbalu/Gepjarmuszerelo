@@ -45,7 +45,7 @@ public class FolyamatbanLevoSzerelesekController implements Initializable {
         FolyamatbanLevoSzerelesekTablaNezet.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
     public void visszaazUjSzerelesekFelvetelehezPushed(ActionEvent event) throws IOException {
-        URL url = Paths.get("./src/main/java/view/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
+        URL url = Paths.get("./src/main/resources/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
         Parent tableViewParent = FXMLLoader.load(url);
         Scene tableViewScene = new Scene(tableViewParent);
 
