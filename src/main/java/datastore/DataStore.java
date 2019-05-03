@@ -26,12 +26,12 @@ public class DataStore {
     public static void loadTulajdonosok(){
             /* TODO */
             //Tulajdonosok.add(new Tulajdonos("Tóth Balázs","Debrecen, Nagycsere tanya HRSZ.:02147/5","123"));
-        Tulajdonosok.addAll(JSONOlvasoIro.tulajdonosokBeolvas("tulajdonosok.json"));
+        Tulajdonosok.addAll(JSONOlvasoIro.tulajdonosokBeolvas("./src/main/resources/tulajdonosok.json"));
         Logger.info(Tulajdonosok.toString());
         }
         public static void loadGepjarmuvek(){
         /* TODO */
-            Gepjarmuvek.addAll(JSONOlvasoIro.gepjarmuveketBeolvas("gepjarmuvek.json"));
+            Gepjarmuvek.addAll(JSONOlvasoIro.gepjarmuveketBeolvas("./src/main/resources/gepjarmuvek.json"));
             Logger.info(Gepjarmuvek.toString());
         }
         public static void loadSzerelesek(){
@@ -39,7 +39,7 @@ public class DataStore {
             /*Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,5)));
             Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,6)
                     ,LocalDate.of(2019, Month.APRIL,6),11,null));*/
-            Szerelesek.addAll(JSONOlvasoIro.szereleseketBeolvas("szerelesek.json"));
+            Szerelesek.addAll(JSONOlvasoIro.szereleseketBeolvas("./src/main/resources/szerelesek.json"));
 
             Logger.info(Szerelesek.toString());
         }

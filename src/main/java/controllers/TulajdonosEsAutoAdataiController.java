@@ -1,4 +1,4 @@
-package view;
+package controllers;
 
 import entitymanager.GepjarmuManager;
 import entitymanager.SzerelesManager;

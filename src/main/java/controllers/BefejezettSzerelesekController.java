@@ -1,10 +1,8 @@
 package controllers;
 
-import datastore.DataStore;
 import entities.Szereles;
 import entitymanager.StatisztikaManager;
 import entitymanager.SzerelesManager;
-import guidemo.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

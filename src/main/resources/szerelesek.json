@@ -111,6 +111,84 @@
         "day": 3
       },
       "MunkavegzesKoltsege": 23
+    },
+    {
+      "Rendszam": "8787878788",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 34423423
+    },
+    {
+      "Rendszam": "564553123134566",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 45
+    },
+    {
+      "Rendszam": "a7a7a7a7a",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 2
+    },
+    {
+      "Rendszam": "79821",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 4343
+    },
+    {
+      "Rendszam": "44",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      }
+    },
+    {
+      "Rendszam": "q4",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 1
     }
   ]
 }
