@@ -28,7 +28,12 @@ public class Szereles  implements SzerelesElkezdese, SzerelesBefejezese {
         MunkavegzesKoltsege = munkavegzesKoltsege;
         Problema = problema;
     }
-
+    public Szereles(String rendszam, LocalDate szerelesKezdete, LocalDate szerelesBefejezese, Integer munkavegzesKoltsege) {
+        Rendszam = rendszam;
+        SzerelesKezdete = szerelesKezdete;
+        SzerelesBefejezese = szerelesBefejezese;
+        MunkavegzesKoltsege = munkavegzesKoltsege;
+    }
     @Override
     public void setSzerelesBefejezese(LocalDate BefejezesIdeje) {
         this.SzerelesBefejezese = BefejezesIdeje;

@@ -34,7 +34,83 @@
         "year": 2019,
         "month": 5,
         "day": 3
-      }
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 34
+    },
+    {
+      "Rendszam": "5",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 34
+    },
+    {
+      "Rendszam": "",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 3
+    },
+    {
+      "Rendszam": "45456465456456",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 56454545
+    },
+    {
+      "Rendszam": "6666",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 23
+    },
+    {
+      "Rendszam": "54",
+      "SzerelesKezdete": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "SzerelesBefejezese": {
+        "year": 2019,
+        "month": 5,
+        "day": 3
+      },
+      "MunkavegzesKoltsege": 23
     }
   ]
 }

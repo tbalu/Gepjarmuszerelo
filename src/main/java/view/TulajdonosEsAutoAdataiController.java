@@ -28,6 +28,12 @@ public class TulajdonosEsAutoAdataiController {
     @FXML private TextArea Problema;
 
     public void szerelesFelvetelePushed(){
+
+        if(Jogositvanyszam.getText()!=null
+            && Nev.getText() != null
+            && Rendszam.getText() != null
+            && Automarka.getText() !=null){
+
         String jogositvanyszamText = Jogositvanyszam.getText();
         TulajdonosManager.getInstance().addTulajdonosokhoz(Nev.getText(),Lakcim.getText(),jogositvanyszamText);
         Logger.info(jogositvanyszamText);
@@ -35,7 +41,8 @@ public class TulajdonosEsAutoAdataiController {
         GepjarmuManager.getInstance().addGepjarmuvekhez(Automarka.getText(),Rendszam.getText(),jogositvanyszamText);
         Nev.clear();
         Jogositvanyszam.clear();
-        Lakcim.clear();
+        Lakcim.clear();}
+        else return;
 
     }
     public void folyamatbanLevoSzerelesekPushed(ActionEvent event) throws IOException {
