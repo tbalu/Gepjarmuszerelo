@@ -2,40 +2,50 @@ package entitymanager;
 
 import datastore.DataStore;
 import entities.Szereles;
-import org.pmw.tinylog.Logger;
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.Optional;
+/**
+ * Ez az osztaly statisztikai adatokat szamit ki.
+ */
 
 public class StatisztikaManager {
     private static StatisztikaManager instance = new StatisztikaManager();
+
+    /**
+     * Singleton osztaly.
+     */
     private StatisztikaManager(){}
     public static StatisztikaManager getInstance(){
         return instance;
     }
 
-    //Teszt
-    /*public Integer evesBevetel(int Ev){
-        return DataStore.getBefejezetlenSzerelesek().stream().filter(c->c.getSzerelesBefejezese()
-                .isAfter(LocalDate.of(Ev, Month.JANUARY,1))&&c.getSzerelesBefejezese()
-                .isBefore(LocalDate.of(Ev, Month.DECEMBER,31))).map(Szereles::getMunkavegzesKoltsege).reduce((a,b)->a+b).get();
-    }*/
+    /**
+     * Az aktualis havi bevetel.
+     * @return {@code Optional<Integer>} tipusu objektum.
+     */
     public Optional<Integer> eHaviBevetel(){
         return DataStore.getSzerelesek().stream().filter(c->c.getSzerelesBefejezese()!=null).filter(c->c.getSzerelesBefejezese().getMonth()==LocalDate.now().getMonth()
                                                         &&c.getSzerelesBefejezese().getYear()==LocalDate.now().getYear())
                                                         .map(Szereles::getMunkavegzesKoltsege)
                                                         .reduce((a,b)->a+b);
     }
+
+    /**
+     * Az aktualis eves bevetel.
+     * @return {@code Optional<Integer>} tipusu objektum.
+     */
     public Optional<Integer> ezEviBevetel(){
         return DataStore.getSzerelesek().stream().filter(c->c.getSzerelesBefejezese()!=null).filter(c->c.getSzerelesBefejezese().getYear()==LocalDate.now().getYear())
                                                     .map(Szereles::getMunkavegzesKoltsege).reduce((a,b)->a+b);
     }
-    /*public Optional<Integer> maiBevetel(){
-        return DataStore.getSzerelesek().stream().filter(c->c.getSzerelesBefejezese()!=null)
-                .filter(c->c.getSzerelesBefejezese().getYear()==LocalDate.now().getYear()
-                && c.getSzerelesBefejezese().getDayOfYear()==LocalDate.now().getDayOfYear())
-                .map(Szereles::getMunkavegzesKoltsege).reduce((a,b) ->a+b);
-    }*/
+
+    /**
+     * Bevetel egy bizonyos idointervallum kozott.
+     * @param Ettol Az intervallum kezdete
+     * @param Eddig Az intervallum
+     * @return {@code Optional<Integer>} tipusu objektum.
+     */
+
     public Optional<Integer> bevetelEkkor(LocalDate Ettol, LocalDate Eddig){
         return DataStore.getSzerelesek().stream().filter(c->c.getSzerelesBefejezese()!=null)
             .filter(c->c.getSzerelesBefejezese().isAfter(Ettol)&&c.getSzerelesBefejezese().isBefore(Eddig))

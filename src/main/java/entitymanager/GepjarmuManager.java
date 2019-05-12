@@ -6,17 +6,22 @@ import entities.Tulajdonos;
 import org.pmw.tinylog.Logger;
 
 import java.util.ListIterator;
-
+/**
+ * Ez az osztaly kezeli a {@link Gepjarmu} objektumokat.
+ * */
 public class GepjarmuManager {
     private static GepjarmuManager instance = new GepjarmuManager();
+    /**
+     * Singleton osztaly.
+     * */
     private GepjarmuManager(){}
     public static GepjarmuManager getInstance(){
         return instance;
     }
 
-    /*public Gepjarmu createGepjarmu(String Marka,String Rendszam){
-        return new Gepjarmu(Marka,Rendszam);
-    }*/
+    /**
+     * Uj gepjarmuvet ad hozza a {@link DataStore} megfelelo listajahoz.
+     * */
     public void addGepjarmuvekhez(String Marka,String Rendszam,String TulajdonosJogositvanyszama){
         ListIterator<Gepjarmu> listIterator = DataStore.Gepjarmuvek.listIterator();
         while (listIterator.hasNext()){

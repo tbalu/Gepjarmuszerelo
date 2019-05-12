@@ -6,17 +6,30 @@ import entities.SzerelesBefejezese;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.pmw.tinylog.Logger;
-
 import java.time.LocalDate;
 import java.util.ListIterator;
 import java.util.stream.Collectors;
 
+/**
+ * A Szerekeseket kezelo osztaly.
+ */
+
 public class SzerelesManager {
     private static SzerelesManager instance = new SzerelesManager();
+
+    /**
+     * Singleton osztaly.
+     */
     private SzerelesManager(){}
     public static SzerelesManager getInstance(){
         return instance;
     }
+
+    /**
+     * Uj szerelest ad hozza a DataStore megfelelo listajahoz.
+     * @param Rendszam  Auto rendszama.
+     * @param Jogositvanyszam Tulajdonos jogositvanyszama.
+     */
 
     public void addSzerelesekhez(String Rendszam,String Jogositvanyszam){
         ListIterator<Szereles> listIterator = DataStore.getSzerelesek().listIterator();
@@ -30,7 +43,12 @@ public class SzerelesManager {
         DataStore.getSzerelesek().add(this.createSzereles(Rendszam));
         Logger.info(DataStore.getSzerelesek().toString());
     }
-    //Teszt
+
+    /**
+     * Uj szereles letrehozasa.
+     * @param Rendszam Gepjarmu rendszama.
+     * @return
+     */
     public Szereles createSzereles(String Rendszam){
         Szereles szereles = new Szereles();
         szereles.setRendszam(Rendszam);
@@ -40,7 +58,14 @@ public class SzerelesManager {
         return szereles;
     }
 
-        //Teszt
+    /**
+     * Szereles befejezeset valositja meg. A {@link SzerelesBefejezese} objektum
+     * Beallitja az objektum {@code MunkavegzesKoltsege}-t es a {@code SzerelesBefejezese}
+     * tagvaltozoit.
+     * @param szereles Megkezdett szereles
+     * @param MunkavegzesKoltsege A munkavegzes koltsege
+     * @return
+     */
     public Szereles szerelesBefejezese(SzerelesBefejezese szereles, Integer MunkavegzesKoltsege) {
         int index = DataStore.getSzerelesek().indexOf(szereles);
         szereles.setSzerelesBefejezese(LocalDate.now());
@@ -48,7 +73,12 @@ public class SzerelesManager {
         DataStore.getSzerelesek().set(index, (Szereles) szereles);
         return (Szereles) szereles;
     }
-    //Teszt
+
+    /**
+     * Kivalogatja azokat a szereleseket amelyeknek a {@link Szereles#getSzerelesBefejezese()}
+     * {@code null} erteku, tehat meg nem fejeztek be.
+     * @return
+     */
     public ObservableList<Szereles> getBefejezettSzerelesek(){
         return FXCollections.observableArrayList(DataStore.Szerelesek.stream()
                                 .filter(c->c.getSzerelesBefejezese()!=null).collect(Collectors.toList()));

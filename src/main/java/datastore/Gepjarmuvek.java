@@ -10,24 +10,23 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.List;
 
+/**
+ * Ezt az osztalyt hasznalom a <code>Gepjarmu</code> tipusu objektumok betoltesere.
+ * A <code>gepjarmuvek</code> listajaba olvassa be a {@link JSONOlvasoIro#gepjarmuveketBeolvas(String)}
+ * fuggveny.
+ */
 public class Gepjarmuvek {
     private List<Gepjarmu> gepjarmuvek;
 
+    /**
+     * Ez a konstruktor letrehozza az obektumot .
+     * @param gepjarmuvek Egy {@code List} interfeszt implementalo
+     *      {@code Gepjarmu}veket tartalmazo lista.
+     */
     public Gepjarmuvek(List gepjarmuvek){
         this.gepjarmuvek=gepjarmuvek;
-    }/*
-    public Gepjarmuvek() {
-        this(Gepjarmuvek.class.getResourceAsStream("alien.json"));
-    }*/
-    public Gepjarmuvek(){}
-    private Gepjarmuvek(InputStream is) {
-        Gson gson = new GsonBuilder().create();
-        //Gson gson = new GsonBuilder().registerTypeAdapter(ZoneId.class, new ZoneIdAdapter()).create();
-//        Country[] arrayOfCountries = gson.fromJson(new InputStreamReader(is), Country[].class);
-//        countries = java.util.Arrays.asList(arrayOfCountries);
-        Type type = new TypeToken<List<Gepjarmu>>(){}.getType();
-        gepjarmuvek = gson.fromJson(new InputStreamReader(is), type);
     }
+
 
     public List<Gepjarmu> getGepjarmuvek() {
         return gepjarmuvek;

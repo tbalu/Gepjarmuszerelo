@@ -1,10 +1,20 @@
 package entities;
 
+/**
+ * A gepjarmuveket modellezo osztaly.
+ */
+
 public class Gepjarmu {
     private String Marka;
     private String Rendszam;
     private String TulajdonosJogositvanyszam;
 
+    /**
+     * Letrehoz egy gepjarmu objektumot.
+     * @param marka A gepjarmu markaja
+     * @param rendszam A gejarmu rendszama
+     * @param tulajdonosJogositvanyszam A gepjarmu tulajdonosanak jogositvanyszama
+     */
     public Gepjarmu(String marka, String rendszam, String tulajdonosJogositvanyszam) {
         Marka = marka;
         Rendszam = rendszam;

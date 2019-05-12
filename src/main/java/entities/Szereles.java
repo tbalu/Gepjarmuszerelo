@@ -1,7 +1,12 @@
 package entities;
 
 import java.time.LocalDate;
-import entities.*;
+
+/**
+ * Szereleseket modellezo osztaly.
+ * A SzerelesElkezdese es SzerelesBefejezese interfeszeket implementalja.
+ */
+
 
 public class Szereles  implements SzerelesElkezdese, SzerelesBefejezese {
     private String Rendszam;
@@ -14,20 +19,26 @@ public class Szereles  implements SzerelesElkezdese, SzerelesBefejezese {
 
     public Szereles(){}
 
-    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    /**
+     * Meg nem letezo uj vagy meg be nem fejezett szereles letrehozasa.
+     * @param rendszam A gepjarmu rendszama
+     * @param szerelesKezdete A szereles kezdete
+     */
+
     public Szereles(String rendszam,LocalDate szerelesKezdete ) {
         SzerelesKezdete = szerelesKezdete;
         Rendszam = rendszam;
-        //Jogositvanyszam = jogositvanyszam;
+
     }
 
-    public Szereles(String rendszam, LocalDate szerelesKezdete, LocalDate szerelesBefejezese, Integer munkavegzesKoltsege, String problema) {
-        Rendszam = rendszam;
-        SzerelesKezdete = szerelesKezdete;
-        SzerelesBefejezese = szerelesBefejezese;
-        MunkavegzesKoltsege = munkavegzesKoltsege;
-        Problema = problema;
-    }
+    /**
+     * Konstruktor a befejezett szerelesek letrehozasahoz.
+     * @param rendszam
+     * @param szerelesKezdete
+     * @param szerelesBefejezese
+     * @param munkavegzesKoltsege
+     */
+
     public Szereles(String rendszam, LocalDate szerelesKezdete, LocalDate szerelesBefejezese, Integer munkavegzesKoltsege) {
         Rendszam = rendszam;
         SzerelesKezdete = szerelesKezdete;
@@ -75,15 +86,7 @@ public class Szereles  implements SzerelesElkezdese, SzerelesBefejezese {
         return this.Rendszam;
     }
 
-    @Override
-    public void setProblema(String problema) {
-        this.Problema = problema;
-    }
 
-    @Override
-    public String getProblema() {
-        return this.Problema;
-    }
 
     @Override
     public String toString() {
@@ -92,7 +95,6 @@ public class Szereles  implements SzerelesElkezdese, SzerelesBefejezese {
                 ", SzerelesBefejezese=" + SzerelesBefejezese +
                 ", MunkavegzesKoltsege=" + MunkavegzesKoltsege +
                 ", Rendszam='" + Rendszam + '\'' +
-                ", Problema='" + Problema + '\'' +
                 '}';
     }
 }

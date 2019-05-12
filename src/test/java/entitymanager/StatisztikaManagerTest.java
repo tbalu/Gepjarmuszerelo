@@ -2,6 +2,8 @@ package entitymanager;
 
 import datastore.DataStore;
 import entities.Szereles;
+import org.junit.Before;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -11,7 +13,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StatisztikaManagerTest {
+public class StatisztikaManagerTest {
 
     Szereles sz1 = new Szereles("ABC", LocalDate.of(2016,4,10),
             LocalDate.of(2016,4,12),23);
@@ -34,6 +36,7 @@ class StatisztikaManagerTest {
     Szereles sz3 = new Szereles("ABC", LocalDate.of(2019,8,4),
             LocalDate.of(2016,8,12),23);
     List<Szereles> szerelesek = new ArrayList<>();
+
 
     void datastoretInicializal(){
         szerelesek.add(sz1);

@@ -4,6 +4,7 @@ import entities.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.apache.commons.lang3.ObjectUtils;
 import org.pmw.tinylog.Logger;
 
 import java.time.LocalDate;
@@ -12,51 +13,73 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ *A program altal hasznalt adatokat tartolja {@code ObservableList}-ekben.
+ */
 public class DataStore {
-        /*public static List<Tulajdonos> Tulajdonosok = new ArrayList<Tulajdonos>();
-        public static List<Gepjarmu> Gepjarmuvek = new ArrayList<Gepjarmu>();
-        public static List<Szereles> Szerelesek = new ArrayList<Szereles>();
-        */
+
         public static ObservableList<Tulajdonos> Tulajdonosok = FXCollections.observableArrayList();
         public static ObservableList<Gepjarmu> Gepjarmuvek = FXCollections.observableArrayList();
         public static ObservableList<Szereles> Szerelesek = FXCollections.observableArrayList();
-        public static ObservableList<BefejezendoSzereles> BefejezendoSzerelesek = FXCollections.observableArrayList();
-        public static ObservableList<Szereles2> Szerelesek2 = FXCollections.observableArrayList();
 
+
+    /**
+     * Betolti a {@code Tulajdonos} objektumokat a {@link JSONOlvasoIro#tulajdonosokBeolvas(String)} fuggveny segitsegevel.
+     */
     public static void loadTulajdonosok(){
             /* TODO */
             //Tulajdonosok.add(new Tulajdonos("Tóth Balázs","Debrecen, Nagycsere tanya HRSZ.:02147/5","123"));
-        Tulajdonosok.addAll(JSONOlvasoIro.tulajdonosokBeolvas("./src/main/resources/tulajdonosok.json"));
+        try{
+        Tulajdonosok.addAll(JSONOlvasoIro.tulajdonosokBeolvas("tulajdonosok.json"));}
+        catch (NullPointerException n){
+            Logger.info("Nincs elem a tulajdonos.json fajlban.");
+        }
         Logger.info(Tulajdonosok.toString());
         }
-        public static void loadGepjarmuvek(){
+
+    /**
+     * Betolti a {@code Gepjarmuvek} objektumokat a {@link JSONOlvasoIro#gepjarmuveketBeolvas(String)} fuggveny segitsegevel.
+     */
+    public static void loadGepjarmuvek(){
         /* TODO */
-            Gepjarmuvek.addAll(JSONOlvasoIro.gepjarmuveketBeolvas("./src/main/resources/gepjarmuvek.json"));
+        try {
+            Gepjarmuvek.addAll(JSONOlvasoIro.gepjarmuveketBeolvas("gepjarmuvek.json"));
+
             Logger.info(Gepjarmuvek.toString());
+        }catch (NullPointerException n){
+            Logger.info("Nincs elem a gepjarmuvek.json fajlban");
         }
-        public static void loadSzerelesek(){
-        /* TODO */
-            /*Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,5)));
-            Szerelesek.add(new Szereles("ABC-123",LocalDate.of(2019, Month.APRIL,6)
-                    ,LocalDate.of(2019, Month.APRIL,6),11,null));*/
-            Szerelesek.addAll(JSONOlvasoIro.szereleseketBeolvas("./src/main/resources/szerelesek.json"));
+        }
+
+    /**
+     * Betolti a {@code Szereles} objektumokat a {@link JSONOlvasoIro#szereleseketBeolvas(String)} fuggveny segitsegevel.
+     */
+    public static void loadSzerelesek() {
+
+        try {
+
+
+            Szerelesek.addAll(JSONOlvasoIro.szereleseketBeolvas("szerelesek.json"));
 
             Logger.info(Szerelesek.toString());
+        }catch (NullPointerException n){
+            Logger.info("Nincs elem a szerelesek.json fajlban");
         }
-        public static void loadSzerelesek2(){
-        /* TODO */
-        Szerelesek2.add(new Szereles2(new SimpleStringProperty("ABC-123"),  LocalDate.of(2019, Month.APRIL,5)));
-        Logger.info(Szerelesek2.toString());
-        }
-        public static void loadBefejezendoSzerelesek(){
-            BefejezendoSzerelesek.add(new BefejezendoSzereles("ABC-123",LocalDate.of(2019,Month.APRIL,4)));
-        }
+    }
 
+
+    /**
+     * Elmenti a {@code Tulajdonos}, {@code Gepjarmu}, {@code Szereles} tipusu objektumokat.
+     * @param tul A tulajdonosokat tartalmazo json fajl neve.
+     * @param gps A gepjarmuveket tartalamzo json fajl neve.
+     * @param szer A szereloket tartalmazo json fajl neve.
+     */
         public static void saveMindent(String tul, String gps, String szer){
             JSONOlvasoIro.gepjarmuveketMent(getGepjarmuvek(),gps);
             JSONOlvasoIro.szereleseketMent(getSzerelesek(),szer);
             JSONOlvasoIro.tulajdonosokatMent(getTulajdonosok(),tul);
         }
+
 
     public static List<Tulajdonos> getTulajdonosok() {
         return Tulajdonosok;
@@ -70,14 +93,14 @@ public class DataStore {
         return Szerelesek;
     }
 
-    //Teszt
+    /**
+     * Kiszuri a befejezettlen szereleseket.
+     * @return {@code ObservableList} tipusu objetumot terit vissza.
+     */
     public static ObservableList<Szereles> getBefejezetlenSzerelesek(){
             return FXCollections.observableArrayList(DataStore.getSzerelesek().stream().filter(c->c.getSzerelesBefejezese()==null)
                     .collect(Collectors.toList()));
     }
-    public static List<Szereles> getBefejezettSzerelesek(){
-        return DataStore.getSzerelesek().stream().filter(c->c.getSzerelesBefejezese()!=null)
-                .collect(Collectors.toList());
-    }
+
 
 }

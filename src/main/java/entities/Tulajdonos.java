@@ -1,5 +1,8 @@
 package entities;
 
+/**
+ * Tulajdonost modellezo osztaly.
+ */
 public class Tulajdonos {
     private String Nev;
 
@@ -15,6 +18,12 @@ public class Tulajdonos {
                 '}';
     }
 
+    /**
+     * Tulajdons letrehozasa.
+     * @param nev A tulajdonos neve
+     * @param lakcim A tulajdonos lakcime
+     * @param jogositvanyszam A tulajdonos jogositvanyszama
+     */
     public Tulajdonos(String nev, String lakcim, String jogositvanyszam) {
         Nev = nev;
         Lakcim = lakcim;

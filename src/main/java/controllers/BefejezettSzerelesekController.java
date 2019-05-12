@@ -23,6 +23,9 @@ import java.time.Month;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * Ez az osztaly iranyitja a befejezett szereleseket megjelenito {@code Scene}-t.
+ */
 public class BefejezettSzerelesekController implements Initializable {
     @FXML private TableView<Szereles> BefejezettSzerelesekTablaNezet;
     @FXML private TableColumn<Szereles,String> RendszamOszlop;
@@ -33,8 +36,15 @@ public class BefejezettSzerelesekController implements Initializable {
     @FXML private Label EHaviBevetel;
     @FXML private Label MaiBevetel;
 
+    /**
+     * Ha megnyomjuk a Vissza az uj szerelesek felvetelehez gombot akkor vissza jutunk az uj szerelesek felvetelehez.
+     * @param event esemeny
+     * @throws IOException Ha nem letezik a fajl amit be akar olvasni.
+     */
+
     public void visszaazUjSzerelesekFelvetelehezPushed(ActionEvent event) throws IOException {
-        URL url = Paths.get("./src/main/resources/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
+        //URL url = Paths.get("target/classes/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
+        URL url = FXMLLoader.getDefaultClassLoader().getResource("TulajdonosEsAutoAdatai.fxml");
         Parent tableViewParent = FXMLLoader.load(url);
         Scene tableViewScene = new Scene(tableViewParent);
 
@@ -44,6 +54,12 @@ public class BefejezettSzerelesekController implements Initializable {
         window.show();
     }
 
+    /**
+     * Inicializalja a tablazatot alkoto valtozokat, amik az osztaly tagvaltozoi.
+     * Kiszamolja az ezevi, ehavi, mai bevetelt.
+     * @param url url
+     * @param resourceBundle resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         RendszamOszlop.setCellValueFactory(new PropertyValueFactory<>("Rendszam"));
@@ -56,13 +72,7 @@ public class BefejezettSzerelesekController implements Initializable {
         BefejezettSzerelesekTablaNezet.setEditable(true);
         RendszamOszlop.setCellFactory(TextFieldTableCell.forTableColumn());
 
-        /*
-        Optional<Integer> ehavibevetel = StatisztikaManager.getInstance().eHaviBevetel();
-        Optional<Integer> ezevibevetel = StatisztikaManager.getInstance().ezEviBevetel();
-        Optional<Integer> maibevetel = StatisztikaManager.getInstance().maiBevetel();
-        ehavibevetel.ifPresent(c->EHaviBevetel.setText(c.toString()));
-        ezevibevetel.ifPresent(c->EzEviBevetel.setText(c.toString()));
-        maibevetel.ifPresent(c->MaiBevetel.setText(c.toString()));*/
+
 
         LocalDate most = LocalDate.now();
         Optional<Integer> ehavibevetel = StatisztikaManager.getInstance()
@@ -71,8 +81,6 @@ public class BefejezettSzerelesekController implements Initializable {
         Optional<Integer> ezevibevetel = StatisztikaManager.getInstance()
                 .bevetelEkkor(LocalDate.of(most.getYear()-1,12,31)
                         ,LocalDate.of(most.getYear()+1, 1,1));
-        //Optional<Integer> ezevibevetel = StatisztikaManager.getInstance().ezEviBevetel();
-        //Optional<Integer> maibevetel = StatisztikaManager.getInstance().maiBevetel();
         Optional<Integer> maibevetel = StatisztikaManager.getInstance()
                 .bevetelEkkor(LocalDate.now().minusDays(1),LocalDate.now().plusDays(1));
         ehavibevetel.ifPresent(c->EHaviBevetel.setText(c.toString()));
