@@ -72,38 +72,6 @@ public class JSONOlvasoIro {
 
     }
 
-  /*  public static List<Tulajdonos> tulajdonosokBeolvas(String fileName){
-        String destination = "";
-        try {
-            Path workingDirectory = FileSystems.getDefault().getPath("").toAbsolutePath();
-            destination = workingDirectory.toString() + File.separator + "data" + File.separator;
-            Logger.info("Working directory: {}", workingDirectory);
-        } catch (Exception e) {
-            Logger.error(e.toString());
-        }
-        try {
-            File directory = new File(destination);
-            if (directory.mkdir()) {
-                Logger.info("Directory {} created", destination);
-            }
-
-            destination = destination + fileName;
-            InputStream source = getClass().getResourceAsStream("/" + fileName);
-            Path dest = Paths.get(destination);
-            if (Files.notExists(dest)) {
-                Files.copy(source, Paths.get(destination));
-                Logger.info("File table.json copied from jar to {}", destination);
-            } else {
-                Logger.info("{} was already existed", destination);
-            }
-        } catch (Exception e) {
-            Logger.error(e.toString());
-            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-        }
-
-    }
-*/
 
     /**
      * Elmenti a szereleseket egy json fajlba.
