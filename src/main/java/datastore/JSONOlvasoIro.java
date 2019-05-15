@@ -2,14 +2,17 @@ package datastore;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonReader;
 import entities.Gepjarmu;
 import entities.Szereles;
 import entities.Tulajdonos;
+import org.pmw.tinylog.Logger;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -27,7 +30,7 @@ public class JSONOlvasoIro {
     public static List<Szereles> szereleseketBeolvas(String FajlNev){
 
         try {
-            //Szerelesek szerelesek = gson.fromJson(new FileReader(FajlNev), Szerelesek.class);
+
             Szerelesek szerelesek = gson.fromJson(new FileReader(ClassLoader.getSystemResource(FajlNev).getFile()), Szerelesek.class);
             return szerelesek.getSzerelesek();
         }catch (FileNotFoundException f){
@@ -55,16 +58,52 @@ public class JSONOlvasoIro {
      * @param FajlNev {@code String} tipusu , a fajl elereset hatarozza meg.
      * @return {@code Tulajdonos}eket tartalmazo {@code List}
      */
+
     public static List<Tulajdonos> tulajdonosokBeolvas(String FajlNev){
 
         try {
-            Tulajdonosok tulajdonosok = gson.fromJson(new FileReader(ClassLoader.getSystemResource(FajlNev).getFile()), Tulajdonosok.class);
+            Logger.info(ClassLoader.getSystemResource(FajlNev).getPath());
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            Tulajdonosok tulajdonosok = gson.fromJson(new FileReader(classLoader.getSystemResource(FajlNev).getFile()), Tulajdonosok.class);
             return tulajdonosok.getTulajdonosok();
         }catch (FileNotFoundException f){
             return null;
         }
 
     }
+
+  /*  public static List<Tulajdonos> tulajdonosokBeolvas(String fileName){
+        String destination = "";
+        try {
+            Path workingDirectory = FileSystems.getDefault().getPath("").toAbsolutePath();
+            destination = workingDirectory.toString() + File.separator + "data" + File.separator;
+            Logger.info("Working directory: {}", workingDirectory);
+        } catch (Exception e) {
+            Logger.error(e.toString());
+        }
+        try {
+            File directory = new File(destination);
+            if (directory.mkdir()) {
+                Logger.info("Directory {} created", destination);
+            }
+
+            destination = destination + fileName;
+            InputStream source = getClass().getResourceAsStream("/" + fileName);
+            Path dest = Paths.get(destination);
+            if (Files.notExists(dest)) {
+                Files.copy(source, Paths.get(destination));
+                Logger.info("File table.json copied from jar to {}", destination);
+            } else {
+                Logger.info("{} was already existed", destination);
+            }
+        } catch (Exception e) {
+            Logger.error(e.toString());
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+
+        }
+
+    }
+*/
 
     /**
      * Elmenti a szereleseket egy json fajlba.
@@ -75,7 +114,8 @@ public class JSONOlvasoIro {
     public static void szereleseketMent(List<Szereles> szerelesek,String FajlNev){
         Szerelesek szerelesek1 = new Szerelesek(szerelesek);
         try {
-            FileWriter writer2 = new FileWriter(FajlNev);
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            FileWriter writer2 = new FileWriter(classLoader.getSystemResource(FajlNev).getFile());
             gson.toJson(szerelesek1, writer2);
             writer2.close();
         }catch (FileNotFoundException f){
@@ -94,7 +134,8 @@ public class JSONOlvasoIro {
     public static void tulajdonosokatMent(List<Tulajdonos> tulajdonosok,String FajlNev){
         Tulajdonosok tulajdonosok1 = new Tulajdonosok(tulajdonosok);
         try {
-            FileWriter writer2 = new FileWriter(FajlNev);
+            Logger.info(ClassLoader.getSystemResource(FajlNev).getPath());
+            FileWriter writer2 = new FileWriter(ClassLoader.getSystemResource(FajlNev).getFile());
             gson.toJson(tulajdonosok1, writer2);
             writer2.close();
         }catch (FileNotFoundException f){
@@ -113,7 +154,7 @@ public class JSONOlvasoIro {
     public static void gepjarmuveketMent(List<Gepjarmu> gpk,String FajlNev){
         Gepjarmuvek gepjarmuvek = new Gepjarmuvek(gpk);
         try {
-            FileWriter writer2 = new FileWriter(FajlNev);
+            FileWriter writer2 = new FileWriter(ClassLoader.getSystemResource(FajlNev).getFile());
             gson.toJson(gepjarmuvek, writer2);
             writer2.close();
         }catch (FileNotFoundException f){

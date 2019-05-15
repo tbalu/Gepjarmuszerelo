@@ -23,12 +23,12 @@ public class Main extends Application {
      * @throws Exception
      */
     public void start(Stage primaryStage) throws Exception{
-        //URL url = Paths.get("target/classes/TulajdonosEsAutoAdatai.fxml").toUri().toURL();
-        //Parent root = FXMLLoader.load(url);
+
         Parent root =  FXMLLoader.load(FXMLLoader.getDefaultClassLoader().getResource("TulajdonosEsAutoAdatai.fxml"));
         primaryStage.setTitle("Gépjarműszervíz");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
+
     }
 
     /**
@@ -43,15 +43,14 @@ public class Main extends Application {
     public static void main(String[] args){
 
 
-        Tulajdonos t = new Tulajdonos("Balu","12341","Debrecen");
-        System.out.println(t.toString());
+
         loadMindent();
         launch(args);
         Logger.info(DataStore.getSzerelesek());
         Logger.info(DataStore.getTulajdonosok());
         Logger.info(DataStore.getGepjarmuvek());
-        DataStore.saveMindent("target/classes/tulajdonosok.json"
-                ,"target/classes/gepjarmuvek.json"
-                ,"target/classes/szerelesek.json");
+        DataStore.saveMindent("tulajdonosok.json"
+                ,"gepjarmuvek.json"
+                ,"szerelesek.json");
     }
 }
